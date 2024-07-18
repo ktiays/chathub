@@ -22,7 +22,6 @@ import GuideModal from '../GuideModal'
 import ThemeSettingModal from '../ThemeSettingModal'
 import Tooltip from '../Tooltip'
 import NavLink from './NavLink'
-import PremiumEntry from './PremiumEntry'
 
 function IconButton(props: { icon: string; onClick?: () => void }) {
   return (
@@ -93,11 +92,6 @@ function Sidebar() {
       </div>
       <div className="mt-auto pt-2">
         {!collapsed && <hr className="border-[#ffffff4d]" />}
-        {!collapsed && (
-          <div className="my-5">
-            <PremiumEntry text={t('Premium')} />
-          </div>
-        )}
         <div className={cx('flex mt-5 gap-[10px] mb-4', collapsed ? 'flex-col' : 'flex-row ')}>
           {!collapsed && (
             <Tooltip content={t('GitHub')}>
